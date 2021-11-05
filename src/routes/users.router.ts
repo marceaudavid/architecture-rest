@@ -17,6 +17,17 @@ usersRouter.get('/', (req, res) => {
     res.status(200).send(users);
 })
 
+/**
+ * @openapi
+ * /users:
+ *   get:
+ *     summary: Retrieve a user by id
+ */
+ usersRouter.get('/:userID', (req, res) => {
+    const users = usersService.getUserByID(req.params.userID);
+    res.status(200).send(users);
+})
+
 
 /**
  * @openapi
@@ -33,6 +44,12 @@ usersRouter.post('/', (req, res) => {
     }
 })
 
+/**
+ * @openapi
+ * /users:
+ *   put:
+ *     summary: Update a user
+ */
 usersRouter.put('/:userID', (req, res) => {
     try {
         usersService.updateUser(req.body);
@@ -41,6 +58,12 @@ usersRouter.put('/:userID', (req, res) => {
     }
 })
 
+/**
+ * @openapi
+ * /users:
+ *   delete:
+ *     summary: Delete a user
+ */
 usersRouter.delete('/:userID', (req: any, res) => {
     try {
         usersService.deleteUser(req.params.userID, req.user.id)

@@ -1,15 +1,21 @@
 import { UnknownUserError } from '../errors/unknown-user.error'
 import { UserDao } from '../dao/users.dao';
 import { UserModel, UserWithToken } from '../models/user.model';
+import { CartDao } from '../dao/carts.dao';
 
 const uuid = require('uuid')
 const jwt = require('jsonwebtoken');
 
 export class UsersService {
     private userDAO: UserDao = new UserDao()
+    private cartDAO: CartDao = new CartDao()
 
     public getAllUsers(): UserModel[] {
         return this.userDAO.list()
+    }
+
+    public getUserByID(userID: string): UserModel {
+        return this.userDAO.getByID(userID)
     }
 
     public createUser(user: UserModel) {
@@ -21,6 +27,21 @@ export class UsersService {
             ...user,
             id: uuid.v4()
         }
+
+        return this.userDAO.create(userToCreate);
+    }
+
+    public register(user: UserModel) {
+        if (!this.checkUserToCreateIsValid(user)) {
+            throw new Error('invalid user');
+        }
+
+        const userToCreate = {
+            ...user,
+            roles: ["user"],
+            id: uuid.v4()
+        }
+
         return this.userDAO.create(userToCreate);
     }
 
@@ -62,6 +83,8 @@ export class UsersService {
                     expiresIn: "2h"
                 }
             )
+
+            this.cartDAO.createCart({id: user.id, items: []})
 
             return {
                 ...user,

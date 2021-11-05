@@ -1,6 +1,11 @@
 import express from 'express';
 import usersRouter from './routes/users.router';
+import booksRouter from './routes/books.router';
 import loginRouter from './routes/login.router';
+import cartsRouter from './routes/cart.router';
+import registerRouter from './routes/register.router';
+import auth from './middlewares/auth.middleware';
+import role from './middlewares/role.middleware';
 const app = express();
 const port = 3000; // default port to listen
 const dotenv = require('dotenv')
@@ -11,8 +16,11 @@ dotenv.config()
 app.use(express.json())
 
 
-app.use('/api/users', usersRouter)
+app.use('/api/users', auth, role(["administrator"]), usersRouter)
+app.use('/api/cart', auth, cartsRouter)
+app.use('/api/books', booksRouter)
 app.use('/api/login', loginRouter)
+app.use('/api/register', registerRouter)
 
 
 // swagger configuration

@@ -6,6 +6,12 @@ const loginRouter = Router();
 
 const usersService = new UsersService();
 
+/**
+ * @openapi
+ * /login:
+ *   post:
+ *     summary: Log in an existing user and return him a JWT
+ */
 loginRouter.post('/', (request, response) => {
     try {
         const user = usersService.login(request.body.email, request.body.password)

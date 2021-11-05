@@ -16,6 +16,7 @@ export class UserDao {
     }
 
     public create(user: UserModel): UserModel {
+        console.log(user)
         this.databaseConnection.push('/users[]', user);
         return user;
     }

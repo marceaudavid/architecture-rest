@@ -22,7 +22,8 @@
       "publisher": "No Starch Press",
       "pages": 472,
       "description": "JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
-      "website": "http://eloquentjavascript.net/"
+      "website": "http://eloquentjavascript.net/",
+      "comments": []
     },
     {
       "id": "536a9df9-3bb9-4426-a1bc-2a7ce08c4c9e",
@@ -34,7 +35,8 @@
       "publisher": "O'Reilly Media",
       "pages": 334,
       "description": "To get the most out of modern JavaScript, you need learn the latest features of its parent specification, ECMAScript 6 (ES6). This book provides a highly practical look at ES6, without getting lost in the specification or its implementation details.",
-      "website": "https://github.com/mjavascript/practical-modern-javascript"
+      "website": "https://github.com/mjavascript/practical-modern-javascript",
+      "comments": []
     },
     {
       "id": "f99d5969-0e1c-44a8-b15f-04aac97100f3",
@@ -46,7 +48,8 @@
       "publisher": "No Starch Press",
       "pages": 352,
       "description": "ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
-      "website": "https://leanpub.com/understandinges6/read"
+      "website": "https://leanpub.com/understandinges6/read",
+      "comments": []
     },
     {
       "id": "5a2b3c32-f6fe-43af-93dd-b0e27eea5bd6",
@@ -58,7 +61,8 @@
       "publisher": "O'Reilly Media",
       "pages": 460,
       "description": "Like it or not, JavaScript is everywhere these days -from browser to server to mobile- and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
-      "website": "http://speakingjs.com/"
+      "website": "http://speakingjs.com/",
+      "comments": []
     },
     {
       "id": "ead01a66-4b9a-4649-a39b-ea130d688336",
@@ -70,7 +74,8 @@
       "publisher": "O'Reilly Media",
       "pages": 254,
       "description": "With Learning JavaScript Design Patterns, you'll learn how to write beautiful, structured, and maintainable JavaScript by applying classical and modern design patterns to the language. If you want to keep your code efficient, more manageable, and up-to-date with the latest best practices, this book is for you.",
-      "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/"
+      "website": "http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/",
+      "comments": []
     },
     {
       "id": "83893960-f7fd-4744-b184-81caeaa09fa5",
@@ -82,7 +87,8 @@
       "publisher": "Independently published",
       "pages": 143,
       "description": "The worldwide best selling You Don't Know JS book series is back for a 2nd edition: You Don't Know JS Yet. All 6 books are brand new, rewritten to cover all sides of JS for 2020 and beyond.",
-      "website": "https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started"
+      "website": "https://github.com/getify/You-Dont-Know-JS/tree/2nd-ed/get-started",
+      "comments": []
     },
     {
       "id": "602c98ef-e385-4c68-bcca-e7c953ffb24d",
@@ -94,7 +100,8 @@
       "publisher": "Apress; 2nd edition",
       "pages": 458,
       "description": "Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro.",
-      "website": "https://git-scm.com/book/en/v2"
+      "website": "https://git-scm.com/book/en/v2",
+      "comments": []
     },
     {
       "id": "2e71e61e-1d7e-4cbe-9798-e6b60c701712",
@@ -106,7 +113,12 @@
       "publisher": "Apress",
       "pages": 310,
       "description": "Get the most out of this foundational reference and improve the productivity of your software teams. This open access book collects the wisdom of the 2017 \"Dagstuhl\" seminar on productivity in software engineering, a meeting of community leaders, who came together with the goal of rethinking traditional definitions and measures of productivity.",
-      "website": "https://doi.org/10.1007/978-1-4842-4221-6"
+      "website": "https://doi.org/10.1007/978-1-4842-4221-6",
+      "comments": [
+        {
+          "comment": "What a time to be alive !"
+        }
+      ]
     }
   ],
   "users": [
@@ -115,10 +127,22 @@
       "password": "test",
       "lastName": "postman",
       "email": "postman@fake.com",
-      "roles": [
-        "administrator"
-      ],
+      "roles": ["administrator"],
       "id": "3ffda8e7-06a3-4154-96b6-e39260048200"
+    },
+    {
+      "email": "marceau.david@fake.com",
+      "password": "password",
+      "firstName": "marceau",
+      "lastName": "david",
+      "roles": ["user"],
+      "id": "734df5fa-0501-488d-b96a-955005b7b87f"
+    }
+  ],
+  "carts": [
+    {
+      "id": "3ffda8e7-06a3-4154-96b6-e39260048200",
+      "items": []
     }
   ]
 }
